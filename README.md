@@ -18,7 +18,15 @@ It works by opening the Bookmap..[??].json file and provides helper functions to
 # Permissions
 Windows 10 users may need to Run as Administrator or give permissions to edit the config file under the Think-or-Swim directory, this depends solely on your OS config. A general check to see if we can write to the directory is performed with an Error Message being provided if that check fails.
 
-To set permissions on the folder so you don't need to Run as Administrator, you can navigate to your ToS Bookmap folder (by default, this is: C:\Program Files\thinkorswim\book_map ) and right-click the "settings" folder --> properties --> security [tab] --> "Edit" button --> Select "Users (*MYComputerName*\Users)" from the "Group or user names" list --> Under the "Permissions for Users" select "Allow" for "Full Control" option --> Hit "Apply" --> Hit "OK"
+To set permissions on the folder so you don't need to Run as Administrator:
+1. Navigate to your ToS Bookmap folder (by default, this is: C:\Program Files\thinkorswim\book_map ) and right-click the "settings" folder.
+2. Select "Properties" from flyout menu
+3. Select "Security" [tab]
+4. Hit "Edit" button
+5. Select "Users (*MYComputerName*\Users)" from the "Group or user names" list.
+6. Under the "Permissions for Users" select "Allow" for "Full Control" option.
+7. Hit "Apply"
+8. Hit "OK"
 
 # General Usage
 
