@@ -4,7 +4,7 @@ A Python-based (self-contained EXE) program to help Think or Swim users extract 
 Supported OS:
 - Windows
 
-Please note that periodic updates from TD Ameritrade for the Think-or-Swim software may break this utility (because of syntax change). 
+Please note that periodic updates from TD Ameritrade for the Think-or-Swim software may break this utility (because of syntax change, config change, etc.). 
 
 # Disclaimer
 Author is not responsible for loss of data or corruption of config files. Use at your own risk.
