@@ -11,6 +11,9 @@ This utility software is designed to allow you to manipulate these configs (with
 
 It works by opening the Bookmap..[??].json file and provides helper functions to extract, import, and clear symbol config data. General usage is based on command-line arguments. The program will create backup copies before it saves out an edited config file, these will be stored as Bookmap..[??].json-bak in the utilities directory. 
 
+- Source code is located in /src folder
+- EXE is located in /build folder
+
 # Config.ini Options
 - BackupCopies [...]
 - BookmapPath [...] (Path to the program, not the config file!)
