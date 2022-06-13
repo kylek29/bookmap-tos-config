@@ -22,6 +22,9 @@ It works by opening the Bookmap..[??].json file and provides helper functions to
 - Source code is located in /src folder
 - EXE is located in /build folder
 
+# Install
+There is no install, the program is designed to run from whatever folder you place it in. By default, it's aimed at the "C:\Program Files\thinkorswim\book_map" directory (default install for Think-or-Swim), but that can be changed in the Config.ini file.
+
 # Config.ini Options
 - BackupCopies [...]
 - BookmapPath [...] (Path to the program, not the config file!)
