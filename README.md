@@ -12,7 +12,15 @@ This utility software is designed to allow you to manipulate these configs (with
 It works by opening the Bookmap..[??].json file and provides helper functions to extract, import, and clear symbol config data. General usage is based on command-line arguments. The program will create backup copies before it saves out an edited config file, these will be stored as Bookmap..[??].json-bak in the utilities directory. 
 
 # Config.ini Options
+- BackupCopies [...]
+- BookmapPath [...] (Path to the program, not the config file!)
+
+# Permissions
+Windows 10 users may need to Run as Administrator or give permissions to edit the config file under the Think-or-Swim directory, this depends solely on your OS config. A general check to see if we can write to the directory is performed with an Error Message being provided if that check fails.
+
+To set permissions on the folder so you don't need to Run as Administrator, you can navigate to your ToS Bookmap folder (by default, this is: C:\Program Files\thinkorswim\book_map ) and right-click the "settings" folder --> properties --> security [tab] --> "Edit" button --> Select "Users (*MYComputerName*\Users)" from the "Group or user names" list --> Under the "Permissions for Users" select "Allow" for "Full Control" option --> Hit "Apply" --> Hit "OK"
 
 # General Usage
 
 # Functions Available
+- Export List of Symbols (stored in the config file) --> Exports to the utilities directory
