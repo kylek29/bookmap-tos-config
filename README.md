@@ -26,8 +26,9 @@ It works by opening the Bookmap..[??].json file and provides helper functions to
 There is no install, the program is designed to run from whatever folder you place it in. By default, it's aimed at the "C:\Program Files\thinkorswim\book_map" directory (default install for Think-or-Swim), but that can be changed in the Config.ini file.
 
 # Config.ini Options
-- BackupCopies [...]
-- BookmapPath [...] (Path to the program, not the config file!)
+- backups : [int] - default: 10 --> The number of backups the program will keep of the configs. With "10", it'll delete the 10th oldest file when a new one is successfully created.
+- bookmappath : [str] - default: "C:\Program Files\thinkorswim\book_map" --> Path to the bookmap program file located inside the Think or Swim software directory, not the path to the config file.
+- bm_config : [str] - default: "bookmap_config_v7.json" --> The name of the config file, you likely won't need to change this until they release a version 8 of Bookmap.
 
 # Permissions
 Windows 10 users may need to Run as Administrator or give permissions to edit the config file under the Think-or-Swim directory, this depends solely on your OS config. A general check to see if we can write to the directory is performed with an Error Message being provided if that check fails.
