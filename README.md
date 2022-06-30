@@ -92,3 +92,6 @@ To set permissions on the folder so you don't need to Run as Administrator:
 |             |                                                                                                                                                                                                                                                                                                                                                             |
 | Example     | `program.exe --importtolastused "MY_FILE.json" --clearcharts  `                                                                                                                                                                                                                                                                                               |
 | Description | Imports the settings stored in "MY_FILE.json" (under the utilities directory) into the lastUsed portion of the settings file AND then clears out all stored chart configs. This will cause any symbol to inherit the lastUsed setting when pulled up in ToS.                                                                                                |
+
+# To Build:
+`pyinstaller main.py --clean --onefile --name "BookmapToSConfigEditor"`
