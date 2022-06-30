@@ -6,6 +6,10 @@ Supported OS:
 
 Please note that periodic updates from TD Ameritrade for the Think-or-Swim software may break this utility (because of syntax change, config change, etc.). 
 
+* /src/ : Contains the source code files.
+* /dist/ : Contains a .zip file of the .exe and related items (readme.md, config.ini)
+
+
 # Disclaimer
 Author is not responsible for loss of data or corruption of config files. Use at your own risk.
 
