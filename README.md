@@ -70,10 +70,6 @@ To set permissions on the folder so you don't need to Run as Administrator:
 \* bool type is True if flag is present, ignored otherwise.
 
 # Command Examples
-|             | Command                                                                                                                                                                                                                                                                                                                                                     |
-|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Example     | program.exe --savelist                                                                                                                                                                                                                                                                                                                                      |
-| Description | Saves the stored configs to a SymbolList.txt file in the utilities directory.                                                                                                                                                                                                                                                                               |
 
 
 |             | Command                                                                                                                                                                                                                                                                                                                                                     |
