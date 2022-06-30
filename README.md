@@ -65,6 +65,7 @@ To set permissions on the folder so you don't need to Run as Administrator:
 | Inject to Charts        | --injecttocharts        | bool | If present, it will loop through all available charts and replace the configs for those charts with the given one excluding the window configs (this is useful for if you have detached windows).                      |
 | Clear Charts            | --clearcharts           | bool | If present, it will clear the stored charts. This command is ignored if "--injecttocharts" is included in the flags.                                                                                                   |
 | SymbolID                | --symbolid              | str  | Required for the --extractsymbolsettings flag to work.                                                                                                                                                                 |
+| Test                | --test              | bool  | If present, it will not save the new config file.                                                                                                                                                               |
 
 \* bool type is True if flag is present, ignored otherwise.
 
