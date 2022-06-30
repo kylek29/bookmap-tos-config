@@ -46,13 +46,19 @@ To set permissions on the folder so you don't need to Run as Administrator:
 8. Hit "OK"
 
 # General Usage
+1. Download and unpack to a folder where you want to story the utility.
+2. Configure the config.ini as you see fit (otherwise, use defaults).
+3. Call the program with a command to see the available configs in the BM settings file, e.g. program.exe --savelist
+4. Check the list and find the settings you want to export to be your base template, note the ID. e.g. "AMD@DXFEED#2"
+5. Call the program with an export command, e.g. program.exe --extractsymbolsettings --symbolid "AMD@DXFEED#2"
+6. Call the program with an import command and how you want to apply it (clear all stored chart configs, or overwrite existing chart configs). e.g. program.exe --importtolastused "AMD@DXFEED#1_cfg.json" --injecttocharts
 
 # Functions Available
 | Action                  | Command Flag            | Type | Description / Usage                                                                                                                                                                                                    |
 |-------------------------|-------------------------|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Print SymbolList        | --printlist             | bool | Prints to console a list of symbols stored in the config file. Useful for trying to determine which to export.                                                                                                         |
 | Save SymbolList         | --savelist              | bool | Same as above, but saves to a SymbolList.txt file in the utilities directory.                                                                                                                                          |
-| Extract Symbol Settings | --extractsymbolsettings | str  | Given a --symbolid value, it will extract the closest match to that. If the settings you want to export are under ID: "AMD@DXFEED#3", you'd want to specify the the full name just in case there are other AMD charts. |
+| Extract Symbol Settings | --extractsymbolsettings | str  | Given a --symbolid value, it will extract the closest match to that. If the settings you want to export are under ID: "AMD@DXFEED#3", you'd want to specify the the full name just in case there are other AMD charts. If a string is specified after the --extractsymbolsettings flag, it will save as that string. Otherwise the default filename pattern will be used. |
 | Import to Last Used     | --importtolastused      | str  | Given an exported config filename, it will import that config to the lastUsed of the config. Combine with other flags.                                                                                                 |
 | Inject to Charts        | --injecttocharts        | bool | If present, it will loop through all available charts and replace the configs for those charts with the given one excluding the window configs (this is useful for if you have detached windows).                      |
 | Clear Charts            | --clearcharts           | bool | If present, it will clear the stored charts. This command is ignored if "--injecttocharts" is included in the flags.                                                                                                   |
