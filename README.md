@@ -17,7 +17,7 @@ In the Think-or-Swim version of Bookmap, this functionality does not exist. Conf
 # The Helper Program
 This utility software is designed to allow you to manipulate these configs (with Think-or-Swim not running) in various ways to help ease the burden of trying to get the same config across all symbols you trade.
 
-It works by opening the Bookmap..[??].json file and provides helper functions to extract, import, and clear symbol config data. General usage is based on command-line arguments. The program will create backup copies before it saves out an edited config file, these will be stored as {epochtimestamp}_bookmap_config_v7.json.bkup in the utilities directory under the backup_configs folder. Example filename: 1656613872_bookmap_config_v7.json.bkup
+It works by opening the Bookmap..[??].json file and provides helper functions to extract, import, and clear symbol config data. General usage is based on command-line arguments. The program will create backup copies before it saves out an edited config file, these will be stored as {epochtimestamp}_bookmap_config_v7.json.bkup in the utilities directory under the *backup_configs* folder. Example filename: 1656613872_bookmap_config_v7.json.bkup
 
 - Source code is located in /src folder
 - EXE is located in /build folder
@@ -28,12 +28,12 @@ There is no install, the program is designed to run from whatever folder you pla
 As a general tip, it might be best to place the EXE somewhere in your user directory (e.g. C:\Users\*Username*\Documents ) so that you have full permissions to the local folder.
 
 # Config.ini Options
-- backups : [int] - default: 10 --> The number of backups the program will keep of the configs. With "10", it'll delete the 10th oldest file when a new one is successfully created.
-- bookmappath : [str] - default: "C:\Program Files\thinkorswim\book_map" --> Path to the bookmap program file located inside the Think or Swim software directory, not the path to the config file.
-- bm_config : [str] - default: "bookmap_config_v7.json" --> The name of the config file, you likely won't need to change this until they release a version 8 of Bookmap.
+- backups : [int] - default: 20 --> The number of backups the program will keep of the configs. With "10", it'll delete the 10th oldest file when a new one is successfully created.
+- bookmap_directory : [str] - default: "C:\Program Files\thinkorswim\book_map" --> Path to the bookmap program file located inside the Think or Swim software directory, not the path to the config file.
+- bookmap_config_file : [str] - default: "bookmap_config_v7.json" --> The name of the config file, you likely won't need to change this until they release a version 8 of Bookmap.
 
 # Permissions
-Windows 10 users may need to Run as Administrator or give permissions to edit the config file under the Think-or-Swim directory, this depends solely on your OS config. A general check to see if we can write to the directory is performed with an Error Message being provided if that check fails.
+Windows 10 users may need to Run as Administrator or give permissions to edit the config file under the Think-or-Swim directory, this depends solely on your OS config.  A general check to see if we can write to the directory is performed with an Error Message being provided if that check fails.
 
 To set permissions on the folder so you don't need to Run as Administrator:
 1. Navigate to your ToS Bookmap folder (by default, this is: C:\Program Files\thinkorswim\book_map ) and right-click the "settings" folder.
@@ -48,4 +48,12 @@ To set permissions on the folder so you don't need to Run as Administrator:
 # General Usage
 
 # Functions Available
-- Export List of Symbols (stored in the config file) --> Exports to the utilities directory
+| Action                  | Command Flag            | Description / Usage |
+|-------------------------|-------------------------|---------------------|
+| Print SymbolList        | --printlist             |                     |
+| Save SymbolList         | --savelist              |                     |
+| Extract Symbol Settings | --extractsymbolsettings |                     |
+| Import to Last Used     | --importtolastused      |                     |
+| Inject to Charts        | --injecttocharts        |                     |
+| Clear Charts            | --clearcharts           |                     |
+| SymbolID                | --symbolid              |                     |
