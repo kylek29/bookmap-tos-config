@@ -48,12 +48,12 @@ To set permissions on the folder so you don't need to Run as Administrator:
 # General Usage
 
 # Functions Available
-| Action                  | Command Flag            | Description / Usage |
-|-------------------------|-------------------------|---------------------|
-| Print SymbolList        | --printlist             |                     |
-| Save SymbolList         | --savelist              |                     |
-| Extract Symbol Settings | --extractsymbolsettings |                     |
-| Import to Last Used     | --importtolastused      |                     |
-| Inject to Charts        | --injecttocharts        |                     |
-| Clear Charts            | --clearcharts           |                     |
-| SymbolID                | --symbolid              |                     |
+| Action                  | Command Flag            | Type | Description / Usage                                                                                                                                                                                                    |
+|-------------------------|-------------------------|------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Print SymbolList        | --printlist             | bool | Prints to console a list of symbols stored in the config file. Useful for trying to determine which to export.                                                                                                         |
+| Save SymbolList         | --savelist              | bool | Same as above, but saves to a SymbolList.txt file in the utilities directory.                                                                                                                                          |
+| Extract Symbol Settings | --extractsymbolsettings | str  | Given a --symbolid value, it will extract the closest match to that. If the settings you want to export are under ID: "AMD@DXFEED#3", you'd want to specify the the full name just in case there are other AMD charts. |
+| Import to Last Used     | --importtolastused      | str  | Given an exported config filename, it will import that config to the lastUsed of the config. Combine with other flags.                                                                                                 |
+| Inject to Charts        | --injecttocharts        | bool | If present, it will loop through all available charts and replace the configs for those charts with the given one excluding the window configs (this is useful for if you have detached windows).                      |
+| Clear Charts            | --clearcharts           | bool | If present, it will clear the stored charts. This command is ignored if "--injecttocharts" is included in the flags.                                                                                                   |
+| SymbolID                | --symbolid              | str  | Required for the --extractsymbolsettings flag to work.                                                                                                                                                                 |
