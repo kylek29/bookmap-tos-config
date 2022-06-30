@@ -17,7 +17,7 @@ In the Think-or-Swim version of Bookmap, this functionality does not exist. Conf
 # The Helper Program
 This utility software is designed to allow you to manipulate these configs (with Think-or-Swim not running) in various ways to help ease the burden of trying to get the same config across all symbols you trade.
 
-It works by opening the Bookmap..[??].json file and provides helper functions to extract, import, and clear symbol config data. General usage is based on command-line arguments. The program will create backup copies before it saves out an edited config file, these will be stored as Bookmap..[??].json-bak in the utilities directory. 
+It works by opening the Bookmap..[??].json file and provides helper functions to extract, import, and clear symbol config data. General usage is based on command-line arguments. The program will create backup copies before it saves out an edited config file, these will be stored as {epochtimestamp}_bookmap_config_v7.json.bkup in the utilities directory under the backup_configs folder. Example filename: 1656613872_bookmap_config_v7.json.bkup
 
 - Source code is located in /src folder
 - EXE is located in /build folder
